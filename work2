@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int i, n, a[100];
+	int temp=0, max=0;
+	printf("所求序列长度为：\n");
+	scanf_s("%d", &n);
+	printf("所求序列为：\n");
+	for (i = 0; i <n; i++)
+	{
+		scanf_s("%d", &a[i]);
+	}
+	for (i = 0; i < n; i++)
+	{
+		if (temp > 0||a[i]>0)
+		{
+			temp = a[i] + temp;
+		}
+		if (max < temp)
+		{
+			max = temp;
+		}
+	}
+	if(max==0)
+	{
+		max = 0;
+	}
+	printf("所求序列字段最大和为：%d\n",max);
+	system("pause");
+	return 0;
+}
