@@ -1,0 +1,64 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace UnitTest1
+{
+	TEST_CLASS(UnitTest1)
+	{
+	public:
+		
+		TEST_METHOD(TestMethod1)
+		{
+			int n = 6, a[6]={ -2,11,-4,13,-5,-2 };
+			int temp = 0, max = 0;
+		    for (int i = 0; i < n; i++)
+		    {
+			     if (temp > 0 || a[i] > 0)
+			     { 
+				    temp = a[i] + temp;
+			      }
+			     if (max < temp)
+			      {
+				     max = temp;
+			      }
+		     }
+			Assert::AreEqual(max, 20);
+		}
+		TEST_METHOD(TestMethod2)
+		{
+			int n = 2, a[2] = { -1,5 };
+			int temp = 0, max = 0;
+			for (int i = 0; i < n; i++)
+			{
+				if (temp > 0 || a[i] > 0)
+				{
+					temp = a[i] + temp;
+				}
+				if (max < temp)
+				{
+					max = temp;
+				}
+			}
+			Assert::AreEqual(max, 5);
+		}
+		TEST_METHOD(TestMethod3)
+		{
+			int n = 4, a[4] = { -1,5,1,-9 };
+			int temp = 0, max = 0;
+			for (int i = 0; i < n; i++)
+			{
+				if (temp > 0 || a[i] > 0)
+				{
+					temp = a[i] + temp;
+				}
+				if (max < temp)
+				{
+					max = temp;
+				}
+			}
+			Assert::AreEqual(max, 6);
+		}
+	};
+}
