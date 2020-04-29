@@ -1,0 +1,46 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+
+
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+
+namespace UnitTest1
+{
+	TEST_CLASS(UnitTest1)
+	{
+	public:
+		
+		TEST_METHOD(TestMethod1)
+		{
+			int Tolsize = 5;//题目数量
+			int sym[4] = { 1,1,0,0 };//存储符号选择
+			int Max = 10;//存储最大值
+			int judge[2] = { 0,0 };//存储括号和小数判断
+			int way=1;//输出方式
+		}
+		TEST_METHOD(TestMethod2)
+		{
+			int Tolsize = 10;//题目数量
+			int sym[4] = { 1,0,1,0 };//存储符号选择
+			int Max = 10;//存储最大值
+			int judge[2] = { 1,0 };//存储括号和小数判断
+			int way = 1;//输出方式
+		}
+		TEST_METHOD(TestMethod3)
+		{
+			int Tolsize = 5;//题目数量
+			int sym[4] = { 1,1,0,0 };//存储符号选择
+			int Max = 10;//存储最大值
+			int judge[2] = { 0,0 };//存储括号和小数判断
+			int way = 1;//输出方式
+		}
+		TEST_METHOD(TestMethod4)
+		{
+			int Tolsize = 12;//题目数量
+			int sym[4] = { 1,1,0,1 };//存储符号选择
+			int Max = 20;//存储最大值
+			int judge[2] = { 1,1 };//存储括号和小数判断
+			int way = 0;//输出方式
+		}
+	};
+}
